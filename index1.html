@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="home.png">
+    <title>HOC CSS</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .menu{
+            display: block;
+        }
+        .menu ul li{
+            list-style: none;
+            display: inline;
+        }
+        a{
+            color:#187c89;
+            font-size:18px;
+            text-decoration: none;
+        }
+        p{
+            color:#4343f4;
+        }
+        h1{
+            background-color:#446b79;
+            text-align: center;
+            color:#ffffff;
+            padding:20px;
+        }
+        h1:hover{
+            background-color:#2f4c58;
+            text-align: center;
+            color:#fff;
+            padding:20px; 
+        }
+        h2{
+            margin-top:40px;
+        }
+        h3{
+            color:#c69905;
+        }
+        table {
+            border: 2px solid #9696d1;
+            margin-left:0px;
+            color:#0077c1;
+            text-shadow:2px 1px 18px #4e20c9;
+            background-color:#e6eded;
+        }
+
+        th,
+        tr,
+        td {
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 10px;
+        }
+        .main{
+            margin:0px 50px 0px 50px;
+        }
+        .footer{
+             background-color:#132a33;
+            text-align: center;
+            color:#ffffff;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+<ul class="menu">
+    <li><a href="">home</a></li>
+    <li><a href="">about</a></li>
+    <li><a href="">Đăng nhập</a></li>
+    <li><a href="">Đăng xuất</a></li>
+</ul>
+<h1>Tổng hợp các thuộc tính của CSS</h1>
+   <div class="main">
+    <div>
+        <p>bởi <span>
+                <span><a href="https://timoday.edu.vn/author/thuvu/" title="Đăng bởi MRT" rel="author">MRT</a></span>
+            </span>
+        </p>
+            <p>Nội dung <span>[<a href="#">Ẩn</a>]</span></p>
+                   
+                   
+                    <ul class="toc_list">
+                        <li><a href="#Cac_thuoc_tinh_cua_CSS">Các thuộc tính của CSS</a>
+                            <ul>
+                                <li><a href="#Cac_nhom_thuoc_tinh_cua_CSS">Các nhóm thuộc tính của CSS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#Cac_thuoc_tinhColor">Các thuộc tính&nbsp;Color</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Background_va_Border">Các thuộc tính Background và Border</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Basic_Box">Các thuộc tính Basic Box</a></li>
+                        <li><a href="#Thuoc_tinh_cho_bo_cuc_Flexible_Box">Thuộc tính cho bố cục Flexible Box</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Text">Các thuộc tính Text</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Text_Decoration">Các thuộc tính Text Decoration</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Font">Các thuộc tính Font</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Writing_Modes">Các thuộc tính Writing Modes</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Table">Các thuộc tính Table</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Lists_va_Counters">Các thuộc tính Lists và Counters</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Animation">Các thuộc tính Animation</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Transform">Các thuộc tính Transform</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Transitions">Các thuộc tính Transitions</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Basic_User_Interface">Các thuộc tính Basic User Interface</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Multi-column_Layout">Các thuộc tính Multi-column Layout</a></li>
+                        <li><a href="#Paged_Media">Paged Media</a></li>
+                        <li><a href="#Generated_Content_cho_trang_da_phuong_tien">Generated Content cho trang đa phương tiện</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Filter_Effects">Các thuộc tính Filter Effects</a></li>
+                        <li><a href="#Image_Values_va_Replaced_Content">Image Values và Replaced Content</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Masking">Các thuộc tính Masking</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Speech">Các thuộc tính Speech</a></li>
+                        <li><a href="#Cac_thuoc_tinh_Marquee">Các thuộc tính Marquee</a></li>
+                        <li><a href="#Xem_them_cong_cu_hoc_CSS_truc_quan">Xem thêm công cụ học CSS trực quan</a></li>
+                    </ul>
+                </div>
+                <h2><span id="Cac_thuoc_tinh_cua_CSS">Các thuộc tính của CSS</span></h2>
+                <p>Đây là bảng tóm tắt tất cả các thuộc tính được sử dụng trong CSS. Sẽ rất cần thiết cho bạn tham khảo, tra cứu khi sử dụng CSS. Chi tiết từng thuộc tính sẽ giới thiệu ở từng bài riêng.</p>
+                <h3><span id="Cac_nhom_thuoc_tinh_cua_CSS">Các nhóm thuộc tính của CSS</span></h3>
+                <div class="w3-row">
+                    <div class="w3-col m4">
+                        <ul style="margin-top:0px;margin-bottom:0px">
+                            <li><a href="#color">Color</a></li>
+                            <li><a href="#background">Background và Borders</a></li>
+                            <li><a href="#basic">Basic Box</a></li>
+                            <li><a href="#flexible">Flexible Box</a></li>
+                            <li><a href="#text">Text</a></li>
+                            <li><a href="#textdecor">Text Decoration</a></li>
+                            <li><a href="#font">Fonts</a></li>
+                            <li><a href="#writing">Writing Modes</a></li>
+                        </ul>
+                    </div>
+                    <div class="w3-col m4">
+                        <ul style="margin-top:0px;margin-bottom:0px">
+                            <li><a href="#table">Table</a></li>
+                            <li><a href="#lists">Lists và Counters</a></li>
+                            <li><a href="#animation">Animation</a></li>
+                            <li><a href="#transform">Transform</a></li>
+                            <li><a href="#transition">Transition</a></li>
+                            <li><a href="#user">Basic User Interface</a></li>
+                            <li><a href="#multicol">Multi-column</a></li>
+                        </ul>
+                    </div>
+                    <div class="w3-col m4">
+                        <ul style="margin-top:0px;margin-bottom:0px">
+                            <li><a href="#paged">Paged Media</a></li>
+                            <li><a href="#gencon">Generated Content</a></li>
+                            <li><a href="#filter">Filter Effects</a></li>
+                            <li><a href="#image">Image/Replaced Content</a></li>
+                            <li><a href="#masking">Masking</a></li>
+                            <li><a href="#speech">Speech</a></li>
+                            <li><a href="#marquee">Marquee</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>Cột “CSS” chỉ ra phiên bản CSS mà thuộc tính đó được sử dụng( CSS1, CSS2 hoặc CSS3).</p>
+                <h2><span id="Cac_thuoc_tinhColor"><a id="color">Các thuộc tính&nbsp;Color</a></span></h2>
+                <p>Chức năng để thiết lập màu sắc và độ trong suốt của văn bản</p>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>color</td>
+                            <td>Đặt màu sắc cho đoạn văn bản</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>opacity</td>
+                            <td>Đặt mức độ trong suốt cho một phần tử nào đó</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Background_va_Border"><a id="background">Các thuộc tính Background và Border</a></span></h2>
+                <p>Chức ănng thiết lập các thuộc tính màu nền và đường biên cho các đối tượng trên trang.</p>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>background</td>
+                            <td>Một thuộc tính viết tắt để đặt thuộc tính nền trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>background-attachment</td>
+                            <td>Đặt một ảnh nền để cố định hoặc&nbsp;cuộn với phần còn lại của trang</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>background-blend-mode</td>
+                            <td>Chỉ định các chế độ trộn của mỗi lớp nền(màu sắc/hình ảnh)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>background-color</td>
+                            <td>Chỉ định màu nền của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>background-image</td>
+                            <td>Chỉ định một hoặc nhiều hình ảnh nền cho một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>background-position</td>
+                            <td>Chỉ định vị trí của hình ảnh nền</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>background-repeat</td>
+                            <td>Thiết lập như thế nào một ảnh nền sẽ được lặp đi lặp lại</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>background-clip</td>
+                            <td>Chỉ định khu vực để sơn màu nền</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>background-origin</td>
+                            <td>Chỉ định nơi các hình nền được định vị</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>background-size</td>
+                            <td>Chỉ định kích thước của ảnh nền</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>Thiết lập tất cả các thuộc tính đường viền trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-bottom</td>
+                            <td>Thiết lập tất cả các thuộc tính đường viền dưới trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-color</td>
+                            <td>Thiết lập màu của đường viền dưới</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-bottom-left-radius</td>
+                            <td>Xác định hình dạng của các đường viền&nbsp;góc dưới bên trái</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-right-radius</td>
+                            <td>Xác định hình dạng của các đường viền&nbsp;góc dưới bên phải</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-bottom-style</td>
+                            <td>Thiết lập kiểu (style) của đường viền dưới</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-width</td>
+                            <td>Thiết lập độ rộng của đường viền dưới</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-color</td>
+                            <td>Thiết lập màu sắc của bốn đường viền</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-image</td>
+                            <td>Một thuộc tính viết tắt để thiết lập tất cả các thuộc tính&nbsp;border-image-*</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-image-outset</td>
+                            <td>Chỉ định giá trị khu vực ảnh viền vượt ra ngoài vùng giới hạn của vùng bao</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-repeat</td>
+                            <td>Chỉ định ảnh viền nên được lặp đi lặp lại, tròn hoặc kéo dài</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-image-slice</td>
+                            <td>Chỉ định cụ thể như thế nào để cắt ảnh viền</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>border-image-source</td>
+                            <td>Chỉ định đường dẫn tới hình ảnh để sử dụng như đường viền</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-image-width</td>
+                            <td>Chỉ định độ rộng của ảnh-viền</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>border-left</td>
+                            <td>Thiết lập tất cả thuộc tính đường viền trái trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-left-color</td>
+                            <td>Thiết lập màu sắc của đường viền trái</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-left-style</td>
+                            <td>Thiết lập kiểu ( style) của đường viền trái</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-left-width</td>
+                            <td>Thiết lập độ rộng của đường viền trái</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-radius</td>
+                            <td>Thuộc tính viết tắt để thiết lập tất cả bốn đường viền-*-thuộc tính radius(bán kính)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-right</td>
+                            <td>Thiết lập thuộc tính đường viền phải trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-color</td>
+                            <td>Thiết lập màu sắc cho đường viền phải</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-right-style</td>
+                            <td>Thiết lập kiểu&nbsp;(style) cho đường viền phải</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-right-width</td>
+                            <td>Thiết lập độ rộng cho đường viền phải</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-style</td>
+                            <td>Thiết lập kiểu&nbsp;(style) &nbsp;cho bốn đường viền</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-top</td>
+                            <td>Thiết lập thuộc tính đường viền trên trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-top-color</td>
+                            <td>Thiết lập màu sắc cho đường viền trên</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-left-radius</td>
+                            <td>Xác định hình dạng của đường viền góc trên bên&nbsp;trái</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-top-right-radius</td>
+                            <td>Xác định hình dạng của đường viền góc trên bên phải</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-style</td>
+                            <td>Thiết lập kiểu&nbsp;(style) cho đường viền trên</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-top-width</td>
+                            <td>Thiết lập độ rộng của đường viền trên</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>border-width</td>
+                            <td>Thiết lập độ rộng của bốn đường viền</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>box-decoration-break</td>
+                            <td>Thiết lập dáng vẻ của hình nền và đường viền của một phần tử &nbsp;tại trang ngắt, hoặc đối với phần tử in-line , tại&nbsp;&nbsp;dòng ngắt.</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>box-shadow</td>
+                            <td>Gắn một hoặc nhiều đổ bóng (drop-shadows) vào hộp</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Basic_Box"><a id="basic">Các thuộc tính Basic Box</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>bottom</td>
+                            <td>Xác định vị trí cuối của phần tử<strong>&nbsp;position</strong> (vị trí)</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>clear</td>
+                            <td>Xác định hai bên của phần tử (left,right) nơi mà phần tử <strong>float</strong> không được cho phép (ngăn cản thành phần không được float trái, phải hay cả hai)</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>clip</td>
+                            <td>Xác định đoạn cho phần tử&nbsp;khi sử dụng thuộc tính <strong>position</strong> có giá trị “<em>absolute</em>“</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>display</td>
+                            <td>Chỉ định làm thế nào một phần tử HTML nào đó sẽ được hiển thị</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>Xác định có hay không một&nbsp;box&nbsp;được float(trôi nổi)</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>height</td>
+                            <td>Thiết lập chiều cao của thành phần</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>left</td>
+                            <td>Xác định vị trí bên trái của phần tử <strong>position</strong></td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>margin</td>
+                            <td>Thiết lập thuộc tính margin (căn lề cho phần tử)&nbsp;trong một thông báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>margin-bottom</td>
+                            <td>Thiết lập lề dưới của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>margin-left</td>
+                            <td>Thiết lập lề trái của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>margin-right</td>
+                            <td>Thiết lập lề phải của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>margin-top</td>
+                            <td>Thiết lập lề trên của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>max-height</td>
+                            <td>Thiết lập chiều cao tối đa của một phần tử</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>max-width</td>
+                            <td>Thiết lập chiều rộng tối đa của một phần tử</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>min-height</td>
+                            <td>Thiết lập chiều cao tối thiểu của một phần tử</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>min-width</td>
+                            <td>Thiết lập chiều rộng tối thiểu của một phần tử</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>overflow</td>
+                            <td>Chỉ định những gì sẽ xảy ra nếu nội dung tràn ra ngoài phần tử hộp</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>overflow-x</td>
+                            <td>Xác định có hay không để cắt cạnh trái/phải của đoạn văn bản, nếu nó tràn ra khỏi khu vực nội dung của phần tử</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>overflow-y</td>
+                            <td>Xác định có hay không để cắt cạnh trên /dưới của đoạn văn bản, nếu nó tràn ra khỏi khu vực nội dung của phần tử</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>padding</td>
+                            <td>Thiết lập lại thuộc tính padding (vùng đệm)&nbsp;trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>padding-bottom</td>
+                            <td>Thiết lập vùng đệm dưới của phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>padding-left</td>
+                            <td>Thiết lập vùng đệm trái của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>padding-right</td>
+                            <td>Thiết lập vùng đệm phải của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>padding-top</td>
+                            <td>Thiết lập vùng đệm trên của một phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>position</td>
+                            <td>Xác định kiểu của phương thức định vị được sử dụng cho một phần tử (static, relative, absolute or fixed)</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>right</td>
+                            <td>Xác định vị trí phải của phần tử position</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>top</td>
+                            <td>Xác định vị trí trên của phần tử position</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>visibility</td>
+                            <td>Xác định có hay không một phần tử có thể nhìn thấy được</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>Thiết lập độ rộng của phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>vertical-align</td>
+                            <td>Sắp xếp nội dung theo chiều dọc của phần tử</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>z-index</td>
+                            <td>Thiết lập thứ tự xếp chồng nhau của phần tử position</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Thuoc_tinh_cho_bo_cuc_Flexible_Box"><a id="flexible">Thuộc tính cho bố cục Flexible Box</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>align-content</td>
+                            <td>Xác định sự căn chỉnh giữa các dòng bên trong một khối linh hoạt ( flexible container) khi các mục không sử dụng các khoảng cách&nbsp;có sẵn</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>align-items</td>
+                            <td>Xác định sự căn chỉnh cho các mục bên trong một khối linh hoạt ( flexible container)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>align-self</td>
+                            <td>Xác định sự căn chỉnh cho các mục được chọn bên trong một khối linh hoạt&nbsp;( flexible container)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>flex</td>
+                            <td>Xác định độ dài của các mục, tương đối với phần còn lại</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>flex-basis</td>
+                            <td>Xác định độ dài ban đầu của một mục linh hoạt (flexible item)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>flex-direction</td>
+                            <td>Xác định hướng của các mục linh hoạt (flexible items)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>flex-flow</td>
+                            <td>Một thuộc tính viết tắt cho thuộc tính flex-direction và&nbsp;flex-wrap</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>flex-grow</td>
+                            <td>Chỉ định bao nhiêu mục sẽ tăng tương đối so với phần còn lại</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>flex-shrink</td>
+                            <td>Chỉ định bao nhiêu mục sẽ giảm tương đối so với phần còn lại</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>flex-wrap</td>
+                            <td>Chỉ định liệu các mục linh hoạt (flexible items) nên bọc hay không</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>justify-content</td>
+                            <td>Xác định sự căn chỉnh giữa các mục bên trong một khối linh hoạt (flexible container) khi các mục không sử dụng tất cả các khoảng cách&nbsp;có sẵn</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>order</td>
+                            <td>Thiết lập thứ tự của các mục linh hoạt&nbsp;(flexible items), tương đối so với phần còn lại</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Text"><a id="text">Các thuộc tính Text</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>hanging-punctuation</td>
+                            <td>Xác định ký tự chấm câu có thể được đặt ở ngoài đường hộp</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>hyphens</td>
+                            <td>Thiết lập làm thế nào tách từ để cải thiện cách bố trí của đoạn văn</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>letter-spacing</td>
+                            <td>Tăng hoặc giảm khoảng cách giữa các ký tự trong một văn bản</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>line-break</td>
+                            <td>Xác định cách ngắt dòng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>line-height</td>
+                            <td>Thiết lập chiều cao của dòng</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>overflow-wrap</td>
+                            <td>Xác định có hay không trình duyệt có thể ngắt dòng trong các từ để ngăn cản việc tràn (Khi một chuỗi quá dài để phù hợp với hộp chứa nó</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>tab-size</td>
+                            <td>Xác định chiều dài của các kí tự tab</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>text-align</td>
+                            <td>Xác định căn chỉnh nội dung theo chiều ngang</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-align-last</td>
+                            <td>Mô tả cách dòng cuối cùng của mộtđoạn&nbsp;hoặc một dòng ngay trước khi một ngắt dòng là căn chỉnh khi text-align là “justify”</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>text-combine-upright</td>
+                            <td>Xác định sự kết hợp của đa ký tự vào khoảng cách của một ký tự đơn</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-indent</td>
+                            <td>Xác định rõ sự thụt dòng đầu tiên trong một khối văn bản</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>text-justify</td>
+                            <td>Xác định phương pháp căn lề thẳng hàng hai bên sử dụng khi text-align là “justify”</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-transform</td>
+                            <td>Điều khiển các chữ in hoa</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>white-space</td>
+                            <td>Xác định cách mà khoảng trắng bên trong một phần tử được xử lý</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>word-break</td>
+                            <td>Xác định quy tắc ngắt dòng đối với scripts non-CJK</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>word-spacing</td>
+                            <td>Tăng hoặc giảm khoảng cách giữa các từ trong đoạn văn</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>word-wrap</td>
+                            <td>Cho phép dài, những từ dài được xuống hàng mà không&nbsp;làm vỡ layout</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Text_Decoration"><a id="textdecor">Các thuộc tính Text Decoration</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-decoration</td>
+                            <td>Xác định các trang trí thêm vào văn bản</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>text-decoration-color</td>
+                            <td>Xác định màu của&nbsp;văn bản trang trí (text-decoration)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-decoration-line</td>
+                            <td>Xác định loại của dòng trong&nbsp;text-decoration</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>text-decoration-style</td>
+                            <td>Xác định kiểu của các dòng trong một văn bản trang trí</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-shadow</td>
+                            <td>Thêm đổ bóng cho văn bản</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>text-underline-position</td>
+                            <td>Xác định vị trí của các gạch dưới được&nbsp;thiết lập bằng cách sử dụng thuộc tính text-decoration</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Font"><a id="font">Các thuộc tính Font</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>@font-face</td>
+                            <td>Một quy tắc cho phép các trang web tải và sử dụng các phông chữ khác với phông chữ “web-safe”</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>@font-feature-values</td>
+                            <td>Cho phép tác giả sử dụng một tên chung trong font-variant-alternate đối với tính năng kích hoạt khác nhau trong OpenType</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>font</td>
+                            <td>Đặt tất cả các thuộc tính font trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-family</td>
+                            <td>Xác định họ phông chữ cho văn bản</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>font-feature-settings</td>
+                            <td>Cho phép kiểm soát các tính năng về in&nbsp;tiên tiến trong OpenType fonts</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-kerning</td>
+                            <td>Kiểm soát việc sử dụng các thông tin kerning (cách các từ cách nhau)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>font-language-override</td>
+                            <td>Kiểm soát việc sử dụng của ngôn ngữ cụ thể nét trạm (language-specific glyphs)&nbsp;trong kiểu chữ</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-size</td>
+                            <td>Xác định kích thước phông chữ của đoạn văn</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>font-size-adjust</td>
+                            <td>Duy trì khả năng&nbsp;đọc văn bản khi phông chữ dự phòng&nbsp;xuất hiện</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-stretch</td>
+                            <td>Chọn kiểu&nbsp;normal, condensed,hoặc&nbsp;expanded từ họ phông chữ</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>font-style</td>
+                            <td>Xác định kiểu chữ cho văn bản</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-synthesis</td>
+                            <td>Quản lí các kiểu chữ&nbsp;(đậm hoặc nghiêng)&nbsp;có thể được tổng hợp bởi trình duyệt</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>font-variant</td>
+                            <td>Xác định có hay không một văn bản được hiển thị với phông chữ small-caps</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-variant-alternates</td>
+                            <td>Kiểm soát việc sử dụng các nét chạm thay thế liên quan đến việc thay tên được định nghĩa trong @font-feature-values</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>font-variant-caps</td>
+                            <td>Kiểm soát việc sử dụng nét chạm (glyph)thay thế cho chữ in hoa</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-variant-east-asian</td>
+                            <td>Kiểm soát việc sử dụng nét chạm (glyph ) thay thế cho các kịch bản Đông Á (ví dụ như Trung Quốc và Nhật Bản)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>font-variant-ligatures</td>
+                            <td>Kiểm soát các chữ ghép và các biểu mẫu theo ngữ cảnh được sử dụng trong các nội dung văn bản của phần tử mà nó được áp dụng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-variant-numeric</td>
+                            <td>Kiểm soát việc sử dụng các họa tiết (glyph) thay thế cho số, phân số và đánh dấu thứ tự</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>font-variant-position</td>
+                            <td>Kiểm soát việc sử dụng các họa tiết thay thế kích thước nhỏ hơn vị trí như là chỉ số trên hoặc chỉ số dưới về đường cơ sở của các phông chữ</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>font-weight</td>
+                            <td>Xác định độ đậm của phông chữ</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Writing_Modes"><a id="writing">Các thuộc tính Writing Modes</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>direction</td>
+                            <td>Xác định hướng văn bản/ hướng bài viết</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>text-orientation</td>
+                            <td>Xác định hướng của văn bản trong một dòng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-combine-upright</td>
+                            <td>Xác định sự kết hợp của đa&nbsp;ký tự vào khoảng cách của ký tự đơn</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>unicode-bidi</td>
+                            <td>Được sử dụng cùng với thuộc tính direction để đặt và trả về&nbsp;&nbsp;cho dù văn bản nên được ghi đè để hỗ trợ nhiều ngôn ngữ trong cùng một tài liệu</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>writing-mode</td>
+                            <td>&nbsp;Xác định liệu dòng văn bản được đặt ra theo chiều ngang hay chiều dọc hay hướng mà khối tiến tới</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Table"><a id="table">Các thuộc tính Table</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>border-collapse</td>
+                            <td>Xác định liệu có hay không đường viền của bảng nên tách biệt</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>border-spacing</td>
+                            <td>Xác định khoảng cách giữa đường viền của các ô lân cận</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>caption-side</td>
+                            <td>Xác định vị trí của một chú thích bảng</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>empty-cells</td>
+                            <td>Xác định có hay không để hiển thị đường viền và nền trên ô trống trong một bảng</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>table-layout</td>
+                            <td>Thiết lập thuật toán bố trí (layout algorithm) được sử dụng cho bảng</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Lists_va_Counters"><a id="lists">Các thuộc tính Lists và Counters</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>counter-increment</td>
+                            <td>Gia tăng một hoặc nhiều counters</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>counter-reset</td>
+                            <td>Tạo hoặc thiết lập lại một hay nhiều&nbsp;counters</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>list-style</td>
+                            <td>Thiết lập tất cả các thuộc tính cho danh sách trong lời khai báo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>list-style-image</td>
+                            <td>Xác định một hình ảnh như đánh dấu mục danh sách</td>
+                            <td>1</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>list-style-position</td>
+                            <td>Xác định nếu đánh danh mục sẽ xuất hiện bên trong hoặc bên ngoài nội dung</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>list-style-type</td>
+                            <td>Xác định loại của đánh dấu danh mục</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Animation"><a id="animation">Các thuộc tính Animation</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>@keyframes</td>
+                            <td>Xác định mã <strong>animation&nbsp;</strong></td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>animation</td>
+                            <td>Một thuộc tính viết tắt cho các thuộc tính<strong> animation</strong> &nbsp;(ngoại trừ animation-play-state và animation-fill-mode)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>animation-delay</td>
+                            <td>Xác định sự chậm trễ&nbsp;đối với&nbsp;sự bắt đầu của một&nbsp;chuyển&nbsp;động của hình ảnh hoặc tag (animation)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>animation-direction</td>
+                            <td>Xác định có hay không các chuyển động nên chạy ngược lại trên chu kỳ thay thế</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>animation-duration</td>
+                            <td>Xác định có bao nhiêu giây hoặc mili giây một chuyển động cần để hoàn thành một chu kỳ</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>animation-fill-mode</td>
+                            <td>Xác định kiểu cho các phần tử khi các chuyển động không chạy (Khi nó dừng lại , hoặc khi nó bị trễ)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>animation-iteration-count</td>
+                            <td>Xác định số lần một chuyển động được thực hiện</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>animation-name</td>
+                            <td>Xác định tên của&nbsp;@keyframes animation</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>animation-play-state</td>
+                            <td>Xác định xem các chuyển động đang được chạy hay tạm dừng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>animation-timing-function</td>
+                            <td>Xác định tốc độ cong của một chuyển động của hình ảnh hoặc tag</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Transform"><a id="transform">Các thuộc tính Transform</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>backface-visibility</td>
+                            <td>Xác định có hay không một phần tử nên được nhìn thấy khi không ở chế độ toàn màn hình</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>perspective</td>
+                            <td>Xác định chiều sâu</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>perspective-origin</td>
+                            <td>Xác định vị trí dưới của phần tử 3D</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>transform</td>
+                            <td>Áp dụng một chuyển đổi &nbsp;2D hoặc 3D đến một phần tử</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>transform-origin</td>
+                            <td>Cho phép bạn thay đổi vị trí trên phần tử <strong>transform</strong></td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>transform-style</td>
+                            <td>Xác định các phần tử lồng nhau sẽ thế nào trong không gian 3D</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Transitions"><a id="transitions">Các thuộc tính Transitions</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>transition</td>
+                            <td>Một thuộc tính viết tắt để thiết lập cho 4 thuộc tính chuyển đổi</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>transition-property</td>
+                            <td>Xác định tên của thuộc tính CSS trong hiệu ứng của quá trình chuyển đổi(none, width, height, all)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>transition-duration</td>
+                            <td>Xác định&nbsp;bao nhiêu giây hoặc mili giây một hiệu ứng chuyển đổi hoàn thành</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>transition-timing-function</td>
+                            <td>Xác định đường cong tốc độ của hiệu ứng chuyển đổi</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>transition-delay</td>
+                            <td>Xác định khi nào hiệu ứng chuyển đổi sẽ bắt đầu</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Basic_User_Interface"><a id="user">Các thuộc tính Basic User Interface</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mo tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>box-sizing</td>
+                            <td>Báo cho trình duyệt các thuộc tính sizing (độ rộng và độ cao)&nbsp;nên có</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>content</td>
+                            <td>Sử dụng với :before và&nbsp;:after pseudo-elements, để chèn nội dung được tạo ra</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>cursor</td>
+                            <td>Xác định kiểu con trỏ chuột sẽ được hiển thị khi di chuyển vào phần tử nào đó</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>ime-mode</td>
+                            <td>Điều khiển trạng thái của trình soạn thảo phương thức nhập cho trường văn bản</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>nav-down</td>
+                            <td>Xác định nơi để di chuyển khi sử dụng phím mũi tên xuống</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>nav-index</td>
+                            <td>Xác định thứ tự tab của phần tử</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>nav-left</td>
+                            <td>Xác định nơi để di chuyển khi sử dụng phím mũi tên sang trái</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>nav-right</td>
+                            <td>Xác định nơi để di chuyển khi sử dụng phím mũi tên sang phải</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>nav-up</td>
+                            <td>Xác định nơi để di chuyển khi sử dụng phím mũi tên lên</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>outline</td>
+                            <td>Thiết lập thuộc tính đường viền&nbsp;trong lời khai báo</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>outline-color</td>
+                            <td>Đặt màu sắc của đường viền bao ngoài</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>outline-offset</td>
+                            <td>Đệm đường viền bao ngoài, và rút nó ra bên ngoài cạnh đường viền (border)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>outline-style</td>
+                            <td>Thiết lập kiểu của đường viền bao ngoài</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>outline-width</td>
+                            <td>Thiết lập độ rộng của đường viền bao ngoài</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>resize</td>
+                            <td>Xác định có hay không một phần tử là thay đổi kích thước bởi người dùng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>text-overflow</td>
+                            <td>Xác định các vấn đề khi văn bản tràn khỏi các phần tử container</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Multi-column_Layout"><a id="multicol">Các thuộc tính Multi-column Layout</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>break-after</td>
+                            <td>Xác định cách xử lý&nbsp;ngắt trang, ngắt cột hoặc ngắt đoạn&nbsp;sau khi tạo hộp</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>break-before</td>
+                            <td>Xác định cách xử lý&nbsp;ngắt trang, ngắt cột hoặc ngắt đoạn trước&nbsp;khi tạo hộp</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>break-inside</td>
+                            <td>Xác định cách xử lý&nbsp;ngắt trang, ngắt cột hoặc ngắt đoạn bên trong hộp được tạo ra</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>column-count</td>
+                            <td>Xác định số cột phần tử nên được chia thành</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>column-fill</td>
+                            <td>Xác định như thế nào để điền vào cột</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>column-gap</td>
+                            <td>Xác định khoảng cách giữa các cột</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>column-rule</td>
+                            <td>Một thuộc tính viết tắt để thiết lập thuộc tính column-rule-* cho các đường kẻ giữa các cột</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>column-rule-color</td>
+                            <td>Xác định màu sắc của các đường kẻ giữa các cột</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>column-rule-style</td>
+                            <td>Xác định kiểu&nbsp;của các đường kẻ giữa các cột</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>column-rule-width</td>
+                            <td>Xác định độ rộng&nbsp;của các đường kẻ giữa các cột</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>column-span</td>
+                            <td>Xác định có bao nhiêu cột chứa phần tử được trải dài</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>column-width</td>
+                            <td>Xác định độ rộng của cột</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>columns</td>
+                            <td>Một thuộc tính viết tắt để thiết lập độ rộng cột (column-width) và số cột (column-count)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>widows</td>
+                            <td>Xác định số dòng tối thiểu phải còn lại trên một trang khi ngắt trang xảy ra bên trong phần tử</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Paged_Media"><a id="paged">Paged Media</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>orphans</td>
+                            <td>Thiết lập số dòng tối thiểu phải còn lại ở cuối của một trang khi ngắt trang xảy ra bên trong phần tử</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>page-break-after</td>
+                            <td>Thiết lập chế độ ngắt trang sau một phần tử</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>page-break-before</td>
+                            <td>Thiết lập chế độ ngắt trang trước&nbsp;một phần tử</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>page-break-inside</td>
+                            <td>Thiết lập chế độ ngắt trang bên&nbsp;trong&nbsp;một phần tử</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Generated_Content_cho_trang_da_phuong_tien"><a id="gencon">Generated Content cho trang đa phương tiện</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>marks</td>
+                            <td>Thêm đoạn văn bản được đánh dấu và/hoặc sử dụng cho tài liệu</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>quotes</td>
+                            <td>Thiết lập các loại dấu bao ngoài khi nhúng một trích dẫn</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Filter_Effects"><a id="filter">Các thuộc tính Filter Effects</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>filter</td>
+                            <td>Xác định hiệu ứng (vd:&nbsp;làm mờ hoặc chuyển đổi màu sắc) trên một phần tử trước khi nó được hiển thị</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Image_Values_va_Replaced_Content"><a id="image">Image Values và Replaced Content</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>image-orientation</td>
+                            <td>Xác định sự quay theo bên phải hoặc theo chiều kim đồng hồ &nbsp;do người dùng áp dụng cho một ảnh &nbsp;(Thuộc tính này có khả năng bị phản đối và chức năng của nó chuyển sang cho HTML)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>image-rendering</td>
+                            <td>Gợi ý cho các trình duyệt về các khía cạnh của một ảnh là rất quan trọng để bảo vệ khi hình ảnh được thu nhỏ lại</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>image-resolution</td>
+                            <td>Xác định độ phân giải nội tại của các ảnh raster được sử dụng trong/ trên phần tử</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>object-fit</td>
+                            <td>Xác định làm&nbsp;thế nào nội dung của một phần tử thay thế &nbsp;nên được trang bị hộp được tạo bởi độ cao và độ rộng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>object-position</td>
+                            <td>Xác định căn chỉnh&nbsp;của phần&nbsp;tử thay thế bên trong hộp của nó</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Masking"><a id="masking">Các thuộc tính Masking</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>mask</td>
+                            <td></td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>mask-type</td>
+                            <td></td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Speech"><a id="speech">Các thuộc tính Speech</a></span></h2>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr class="alt">
+                            <td>mark</td>
+                            <td>Một thuộc tính viết tắt để thiết lập thuộc tính &nbsp;mark-before và&nbsp;mark-after</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>mark-after</td>
+                            <td>Cho phép đánh dấu tên được gắn liền với những&nbsp;dòng âm thanh</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>mark-before</td>
+                            <td>Cho phép đánh dấu tên được gắn liền với những&nbsp;dòng âm thanh</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>phonemes</td>
+                            <td>xác định cách phát âm cho các văn bản chứa các phần tử tương ứng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>rest</td>
+                            <td>Một thuộc tính viết tắt để thiết lập&nbsp;thuộc tính&nbsp;the rest-before và&nbsp;rest-after</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>rest-after</td>
+                            <td>Xác định phần còn lại hoặc ranh giới điệu tính được quan sát sau khi nói phần tử nội dung</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>rest-before</td>
+                            <td>Xác định phần còn lại hoặc ranh giới điệu tính để quan sát trước khi nói phần tử nội dung</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>voice-balance</td>
+                            <td>Xác định sự cân bằng giữa các kênh trái và phải</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>voice-duration</td>
+                            <td>Xác định nó phải mất bao lâu để trả lại các lựa chọn phần tử nội dung</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>voice-pitch</td>
+                            <td>Xác định mức độ trung bình (tần số)&nbsp;của giọng nói</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>voice-pitch-range</td>
+                            <td>Xác định sự thay đổi của tần số</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>voice-rate</td>
+                            <td>Điều khiển tốc độ nói</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>voice-stress</td>
+                            <td>Chỉ ra cường độ của sự nhấn mạnh được áp dụng</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>voice-volume</td>
+                            <td>Đề cập đến biên độ của dạng sóng đầu ra của các bài phát biểu</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2><span id="Cac_thuoc_tinh_Marquee"><a id="marquee">Các thuộc tính Marquee</a></span></h2>
+                <p>Chức năng tạo chữ chạy trong HTML</p>
+                <table class="w3-table-all notranslate">
+                    <tbody>
+                        <tr class="alt">
+                            <th>Thuộc tính</th>
+                            <th>Mô tả</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>marquee-direction</td>
+                            <td>Thiết lập hướng di chuyển nội dung</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>marquee-play-count</td>
+                            <td>Thiết lập bao nhiêu lần di chuyển nội dung</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>marquee-speed</td>
+                            <td>Thiết lập cách nhanh chóng cuộn nội dung</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="alt">
+                            <td>marquee-style</td>
+                            <td>Thiết lập kiểu di chuyển nội dung</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+         </div>
+         <div class="footer">Trang web được tạo bởi <a href="https://www.facebook.com/profile.php?id=100012224198837&ref=br_rs">Lê Anh Vũ</a></div>
+</body>
+
+</html>
