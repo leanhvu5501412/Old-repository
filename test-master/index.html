@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="icon" href="home.png">
+        <title>học lại html</title>
+        <meta name="">
+        <style>
+            body{
+                font-family:monospace;
+            }
+        </style>
+    </head>
+       <body>
+       <h1>bài 1: tổng quan HTML và định dạng văn bản</h1>
+        <!-- NỘI DUNG CHÚ THÍCH-->
+        <base href="index2.html" title="quy dinh dich den cho trang web bang the   BASE  ">
+        <hr align="center" color="black" noshade size="4px" width="30px">
+        <hr align="center" color="black" noshade size="4px" width="30px">
+        <hr align="center" color="black" noshade size="4px" width="30px">
+        
+        <h3>Các thẻ định dạng văn bảng:</h3>
+        <b>the b in đậm</b><br>
+        <i>thẻ i in nghiêng</i><br>
+        <u>thẻ u gạch chân</u><br>
+        <s>thẻ s gạch ngang</s><br>
+        <strike>thẻ strike gạch ngang</strike><br>
+        <tt>thẻ tt chữ đánh máy</tt><br>
+        <strong>thẻ strong in đậm</strong><br>
+        <em>thẻ em cữ in nghiên</em><br>
+        <blink>thẻ blink chử nhấp nháy</blink><br>
+        <cite>thẻ cite hiển thị dạng chú thích</cite><br>
+        <mark>thẻ mark đánh dấu</mark><br>
+        <pre>thẻ pre
+        để định dạng tự do thẻ
+        cách đã viết
+        hihi  </pre>
+        <br>
+        <big>thẻ big làm chữ lớn hơn bình thường</big><br>
+        <small>thẻ small làm thẻ nhỏ hơn chữ bình thường</small><br>
+        thẻ <sub>sub</sub><br>
+        thẻ <sup>sup</sup><br>
+        <font face="monospace" color="red" size="15px"> đây là thẻ font</font>
+        <p align="center"> thẻ p</p>
+        <center>thẻ center</center>
+        <h4 title="từ h1 đến h6">thẻ hx x từ 1 đến 6  </h4>
+        <blockquote>thẻ blockquote: tạo thêm khoảng trắng bên trái </blockquote>
+        <div align="center"> thẻ div có thuộc tính align</div>
+        <marquee behavior="scroll" direction="left" bgcolor="red" align="" height="50px" width="200px" hspace="300px" vspace="50px" loop scrollamount="5" scrolldelay="90"> thẻ MARQUEE tạo chữ chạy ngang qua lại lên xuống, thuộc tính align có left right top middle bottom</marquee>
+        <br>
+        <p>
+ behavior= ”scroll/slide/alternate” :Scroll: mặc định, chữ chạy đụng đường biên rồi mất dần.
+Slide: chữ chạy đụng đường biên rồi biến mất.
+Alternate: chữ chạy thay đổi hướng khi đụng đường biên. 
+<br>
+bgcolor=”color ”<br>
+direction=”left/right”  hướng chạy đến của dòng chữ. Mặc định: left.<br>
+height=”n” <br>
+width=”n” <br>
+hspace=”n” khoảng trắng trái phải giữa dòng chữ chạy và văn bản bao quanh.<br>
+vspace=”n” khoảng trắng trên dưới giữa dòng chữ chạy và văn bản bao quanh.<br>
+loop=”n” <br>
+scrollamount=”n” khoảng cách (pixel) giữa các dòng chữ chạy (độ dời).<br>
+scrolldelay=”n” khoảng thời gian dừng giữa các dòng chữ chạy (tốc độ).<br>
+</p>
+       <h3>thẻ danh sách</h3>
+       <b>danh sách kiểu ul, ol, li:</b>
+       <ul type="" start="">
+           <li type="" start="">sungha jung</li>
+           <li>king hụjnue</li>
+           <li> nami neda</li>
+           <li>banloe</li>
+       </ul>
+       <ol>
+           <li>harsw</li>
+           <li>hougu</li>
+           <li>louture</li>
+           <li>matrat</li>
+       </ol>
+        <b>danh sách kiểu dl, dt, dd</b>
+        
+        <dl>
+            <dt>HTML:</dt>
+                <dd>thẻ html</dd>
+            <dt>thẻ dt</dt>
+                <dd>thẻ dd</dd>
+        </dl>
+        <hr size="10px" color="red">
+        <h1>bài 2 hình ảnh - âm thanh - liên kết</h1>
+        <b>chèn hình ảnh, video</b>
+        <img
+src=”url”
+align=”AlignType”
+alt=”AlternativeText”
+width=”n”
+height=”n”
+border=”n”
+vspace=”n”
+hspace=”n”
+lowsrc=”url” 
+dynsrc =”url”
+start =”fileopen/mouseover”
+loop =”n/infinite” 
+ >
+   <p>
+   
+src=”url” : Chỉ định đường dẫn tập tin ảnh cần chèn. Có thể là địa chỉ tham chiếu tuyệt đối hay tương đối.  
+Không nên liên kết tập tin hình ảnh bằng địa chỉ url của đĩa cứng.
+Thông thường các tập tin ảnh được lưu trong thư mục riêng để dễ quản lý các tập tin trong website.
+<br>
+align= “AlignType” : Canh hàng hình ảnh so với văn bản
+left / right / top / middle / bottom / texttop / absmiddle / baseline  …
+<br>
+alt=”AlternativeText” : Tạo chú thích cho hình chèn vào trang Web
+Một số trình duyệt không hỗ trợ hình ảnh hoặc người dùng xác lập không hiển thị hình hay không tải hình. Trong trường hợp này hình được thay bằng một khung trống. Do đó nên tạo các chú thích (alternate text) để hiển thị thay hình ảnh.
+Trình duyệt IE 3.0 và Netscape 4.0 trở về sau thường hiển thị chú thích dưới dạng TOOL TIP khi trỏ chuột vào ảnh.  
+<br>
+width=”n”
+height=”n”
+: Qui định khoảng trắng xung quanh hình.
+Đơn vị: pixel.
+vspace: trên và dưới hình.
+hspace: trái và phải hình.
+
+<br>
+border=”n”
+<br>
+vspace=”n”
+hspace=”n”
+<br>
+lowsrc=”url” : Thuộc tính cho phép hiển thị lần lượt hai hình cùng một vị trí. Thường dùng nạp hình có kích thước nhỏ trước trong khi chờ nạp hình có kích thước lớn hơn để tạo cảm giác hình được nạp từ trạng thái thô sang chi tiết.
+
+<br>
+dynsrc =”url” : Chỉ định đường dẫn tập tin ảnh cần chèn. Một số định dạng phim: .MPG, .MPEG (thông dụng nhất dành cho phim trên WEB), .AVI, .MOV, .WMV …
+<br>
+start =”fileopen/mouseover” : Chỉ định video sẽ được chơi khi tài liệu được mở hay khi trỏ con chuột vào nó. Có thể kết hợp cả hai giá trị này nhưng phải phân cách chúng bởi dấu phẩy 
+<br>
+loop =”n/infinite” : Chỉ định số lần chơi. Nếu LOOP = INFINITE thì file video sẽ được chơi vô hạn lần.
+  <br>
+   </p>
+   <p id="body">
+background	: Chỉ định ảnh làm nền cho trang Web. Trình duyệt tự xếp ngói (tilling) hình ảnh sao cho vừa với phạm vi hiển thị của trang Web.
+bgproperties=”fixed”	Chèn hình mờ bất động (watermark), ảnh nền không bị cuộn khi kéo thanh Scroll bar. Chỉ hiệu lực trong IE. <br>
+bgcolor :	Chỉ định màu nền. <br>
+text	: Chỉ định màu văn bản <br>
+link	: Màu các hyperlink chưa chọn <br>
+vlink	: Màu các hyperlink đã chọn <br>
+alink	: Màu các hyperlink đang chọn <br>
+leftmargin	: Lề trái trang Web. Dùng trong IE <br>
+rightmargin :	Lề phải trang Web. Dùng trong IE <br>
+topmargin	: Lề trên trang Web. Dùng trong IE <br>
+n: là số nguyên dương, tính bằng pixel. <br>
+Thông thường căn lề xác biên trái trên. <br>
+<!--    <body leftmargin="0" topmargin="0">-->
+   </p>
+   <p>
+   thẻ BGSOUND đặt dưới thẻ head à trên body
+   BGSOUND src="" loop = n  /thẻ đóng </p>
+   <p>thẻ a . ví dụ: <a href="#">thẻ a</a></p>
+   <b>thẻ Image map:</b>
+   <p>
+<!--
+       <map  name = "MapName">
+		<area   shape = "rect/circle/poly" coords = " "  href = "url">	
+		<area   shape = "rect/circle/poly" coords = " "  href = "url">
+        </map>
+-->
+<!--
+<MAP    name=abc>
+   <AREA coords=46,3,150,27   href="thongbao.htm"    shape=RECT>
+   <AREA coords=34,32,151,54  href="lichcongtac.htm" shape=RECT> 
+   <AREA coords=64,60,151,77  href="webmail.htm"     shape=RECT>
+   <AREA coords=87,83,157,103 href="unicode.htm"     shape=RECT>
+</MAP>
+
+<IMG border=0 src="linhtinh.gif" useMap=#abc width=165 height=99> 
+-->
+   </p>
+   
+    <h2>Thẻ định dạng : table : </h2>
+   <table border="3px">
+       <tr>
+           <th>thuộc tính</th>
+           <th>ý nghĩa</th>
+       </tr>
+       <tr>
+           <td>border=n</td>
+           <td>độ dày đường viền</td>
+       </tr>
+       <tr>
+           <td>bordercolor=color</td>
+           <td>màu cho đường viền</td>
+       </tr>
+       <tr>
+           <td>bordercolorlight=color</td>
+           <td>màu cho đường viền được chiếu sáng</td>
+       </tr>
+       <tr>
+           <td>width:</td>
+           <td>biết ròi</td>
+       </tr>
+       <tr>
+           <td>align</td>
+           <td>center/left/right</td>
+       </tr>
+       <tr>
+           <td>bgcolor</td>
+           <td>màu nền cho bảng</td>
+       </tr>
+       <tr>
+           <td>background</td>
+           <td>ảnh nền cho bảng</td>
+       </tr>
+       <tr>
+           <td>cellspacing=n</td>
+           <td> khoảng các giữa các ô</td>
+       </tr>
+       <tr>
+           <td>celladding=n</td>
+           <td>khoảng các giữa nội dung và đường viền</td>
+       </tr>
+   </table>
+   <h2>Định dạng tiêu đề : th, tr, td:</h2>
+   <table border bgcolor="white">
+       <tr>
+           <th>Thuộc tính</th>
+           <th>Ý nghĩa</th>
+       </tr>
+       <tr>
+           <td>align=</td>
+           <td>center/left/right</td>
+       </tr>
+       <tr>
+           <td>valign</td>
+           <td>canh lề nội dung bên trong</td>
+       </tr>
+       <tr>
+           <td>nowrap</td>
+           <td>Dùng thẻ th và td, giữ văn bản trên cùng dòng trình duyệt sẽ tự động mở rộng ô để hiển thị thông tin. Tuy nhiên không nên dùng vì làm vô hiệu thuộc tính width của ô.</td>
+       </tr>
+       <tr>
+           <td>width=n, height=n,</td>
+           <td></td>
+       </tr>
+       <tr>
+           <td>bgcolor</td>
+           <td>màu nền</td>
+       </tr>
+       <tr>
+           <td>background=url</td>
+           <td>ảnh nền</td>
+       </tr>
+       <tr>
+           <td>rowspan</td>
+           <td>dùng cho thẻ td, th đẻ tạo ô có độ cao bằng n hàng khai báo</td>
+       </tr>
+       <tr>
+           <td>colspan=n</td>
+           <td>dùng cho thẻ td, th để tạo ô có độ rộng bằng n cột khai báo</td>
+       </tr>
+   </table>
+    </body>
+</html>
